@@ -1,0 +1,291 @@
+/* ===== ABAS ===== */
+.tabs-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    bottom: -2px;
+}
+
+.tab-btn:hover {
+    color: #cf2e2e;
+}
+
+.tab-btn.active {
+    color: #cf2e2e;
+    border-bottom-color: #cf2e2e;
+}
+
+/* ===== CONTEÚDO DAS ABAS ===== */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== GRID DE CURSOS ===== */
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* ===== CARDS DE CURSOS EXPANSÍVEIS ===== */
+.curso-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-left: 4px solid #cf2e2e;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-left-width: 6px;
+}
+
+.curso-header {
+    background: linear-gradient(135deg, #f9f9f9, #fff);
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.curso-header h3 {
+    color: #cf2e2e;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.curso-body {
+    padding: 20px;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #e8f1f7;
+}
+
+/* ===== LAYOUT HORIZONTAL CONTEÚDO ===== */
+.curso-conteudo {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.curso-descricao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.curso-descricao p {
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    text-align: justify;
+    flex-grow: 1;
+    color: #333;
+}
+
+.curso-descricao strong {
+    color: #333;
+}
+
+/* ===== IMAGEM DO CURSO ===== */
+.curso-imagem {
+    flex-shrink: 0;
+}
+
+.curso-imagem img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.curso-card:hover .curso-imagem img {
+    transform: scale(1.05);
+}
+
+/* ===== INFORMAÇÕES COMPACTAS ===== */
+.info-compacta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(207, 46, 46, 0.2);
+    background: rgba(52, 152, 219, 0.15);
+    padding: 12px;
+    border-radius: 3px;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-left: 12px;
+}
+
+.info-compacta span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.85em;
+    color: #555;
+}
+
+.info-compacta strong {
+    color: #2980b9;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1200px) {
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .curso-conteudo {
+        gap: 15px;
+    }
+
+    .curso-imagem img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .curso-conteudo {
+        flex-direction: column;
+    }
+
+    .curso-imagem {
+        width: 100%;
+    }
+
+    .curso-imagem img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .info-compacta {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs-container {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .tab-btn {
+        border-bottom: 3px solid #ddd;
+        bottom: 0;
+        text-align: left;
+    }
+
+    .tab-btn.active {
+        border-bottom-color: #cf2e2e;
+    }
+
+    .curso-body {
+        padding: 15px;
+    }
+
+    .curso-descricao p {
+        font-size: 0.9em;
+    }
+
+    .info-compacta {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        font-size: 0.8em;
+        padding: 10px;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tab-btn {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+
+    .curso-header {
+        padding: 15px;
+    }
+
+    .curso-header h3 {
+        font-size: 1.1em;
+    }
+
+    .curso-body {
+        padding: 15px;
+    }
+
+    .curso-descricao p {
+        font-size: 0.85em;
+    }
+
+    .curso-imagem img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .info-compacta {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .info-compacta span {
+        font-size: 0.75em;
+    }
+}

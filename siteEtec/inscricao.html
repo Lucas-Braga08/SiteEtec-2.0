@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - ETEC Zona Leste</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inscricao.css">
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <div class="logo-section">
+            <h1>ETEC Zona Leste</h1>
+            <p>Centro Paula Souza</p>
+        </div>
+        <div class="header-contact">
+            <span><a href="tel:+551120454000">(11) 2045-4000</a></span>
+            <span><a href="mailto:dir.etezonaleste@centropaulasouza.sp.gov.br">dir.etezonaleste@centropaulasouza.sp.gov.br</a></span>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Início</a>
+        
+        <div class="nav-item">
+            <a href="cursos.html">Cursos</a>
+            <div class="dropdown-menu">
+                <a href="cursos.html#tecnicos">Cursos Técnicos - Modalidade Presencial</a>
+                <a href="cursos.html#mtec">Ensino Médio Integrado ao Técnico (M-Tec)</a>
+                <a href="cursos.html#ams">Articulação dos Ensinos Médios - Técnico e Superior (AMS)</a>
+            </div>
+        </div>
+        
+        <a href="inscricao.html">Inscrição</a>
+        <a href="contato.php">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Formulário de Inscrição</h2>
+    <p class="descricao">
+        Preencha o formulário abaixo para se inscrever em um de nossos cursos técnicos. 
+        Todos os campos marcados com * são obrigatórios.
+    </p>
+
+    <div class="form-box">
+        <form id="inscricaoForm" method="POST" action="processar.php" class="form-grid" novalidate>
+
+            <div>
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                <span class="field-error" id="erro-nome" role="alert"></span>
+            </div>
+
+            <div>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                <span class="field-error" id="erro-email" role="alert"></span>
+            </div>
+
+            <div>
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 98765-4321" required maxlength="15">
+                <span class="field-error" id="erro-telefone" role="alert"></span>
+            </div>
+
+            <div>
+                <label for="datanascimento">Data de Nascimento *</label>
+                <input type="text" id="datanascimento" name="datanascimento" placeholder="DD/MM/AAAA" required>
+                <span class="field-error" id="erro-datanascimento" role="alert"></span>
+            </div>
+
+            <div class="full">
+                <label for="endereco">Endereço Completo *</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua/Av., número, complemento" required>
+                <span class="field-error" id="erro-endereco" role="alert"></span>
+            </div>
+
+            <div>
+                <label for="bairro">Bairro *</label>
+                <input type="text" id="bairro" name="bairro" placeholder="Nome do bairro" required>
+                <span class="field-error" id="erro-bairro" role="alert"></span>
+            </div>
+
+            <div>
+                <label for="municipio">Município *</label>
+                <input type="text" id="municipio" name="municipio" placeholder="Município" required>
+                <span class="field-error" id="erro-municipio" role="alert"></span>
+            </div>
+
+            <div class="full">
+                <label for="escolaridade">Nível de Escolaridade Atual *</label>
+                <select id="escolaridade" name="escolaridade" required>
+                    <option value="">Selecione...</option>
+                    <option>Cursando o Ensino Fundamental (8º ou 9º ano)</option>
+                    <option>Ensino Fundamental Completo</option>
+                    <option>Cursando o Ensino Médio</option>
+                    <option>Ensino Médio Completo</option>
+                    <option>Ensino Superior Incompleto</option>
+                    <option>Ensino Superior Completo</option>
+                </select>
+                <span class="field-error" id="erro-escolaridade" role="alert"></span>
+            </div>
+
+            <div class="full">
+                <label for="curso">Qual curso você deseja se inscrever? *</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Selecione um curso</option>
+                    <option>Desenvolvimento de Sistemas</option>
+                    <option>Administração</option>
+                    <option>Contabilidade</option>
+                    <option>Finanças</option>
+                    <option>Logística</option>
+                    <option>Recursos Humanos</option>
+                    <option>Serviços Jurídicos</option>
+                </select>
+                <span class="field-error" id="erro-curso" role="alert"></span>
+            </div>
+
+            <div class="full">
+                <label for="motivacao">Por que você se interessa por este curso? *</label>
+                <textarea id="motivacao" name="motivacao" rows="5" placeholder="Conte-nos sobre seus objetivos profissionais e por que escolheu este curso..." required maxlength="500"></textarea>
+                <span class="field-error" id="erro-motivacao" role="alert"></span>
+                <span class="char-count" id="charCount">0 / 500</span>
+            </div>
+
+            <div class="full">
+                <label for="experiencia">Você já possui experiência na área? (Opcional)</label>
+                <textarea id="experiencia" name="experiencia" rows="3" placeholder="Descreva qualquer experiência prévia relacionada ao curso..."></textarea>
+            </div>
+
+            <div class="full checkbox-container">
+                <input type="checkbox" id="aceite" name="termos" required>
+                <label for="aceite">Concordo com os termos e condições de inscrição e aceito a política de privacidade *</label>
+                <span class="field-error" id="erro-aceite" role="alert"></span>
+            </div>
+
+            <div class="full botoes-container">
+                <button type="submit" id="submitBtn" class="btn-enviar">
+                  <span class="btn-text">Enviar Inscrição</span>
+                  <span class="btn-loader" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn-cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Sobre</h3>
+            <p>ETEC Zona Leste - Instituição de ensino técnico público mantida pelo Centro Paula Souza.</p>
+            <p>Formando profissionais qualificados desde 2006.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p>📍 Avenida Águia de Haia, 2633</p>
+            <p>Cidade AE Carvalho - São Paulo, SP - CEP: 03694-000</p>
+            <p>📞 <a href="tel:+551120454000">(11) 2045-4000</a></p>
+            <p>📧 <a href="mailto:dir.etezonaleste@centropaulasouza.sp.gov.br">dir.etezonaleste@centropaulasouza.sp.gov.br</a></p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Links Úteis</h3>
+            <p><a href="sobre.html">Sobre a ETEC</a></p>
+            <p><a href="cursos.html">Nossos Cursos</a></p>
+            <p><a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a></p>
+            <p><a href="contato.php">Fale Conosco</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 ETEC Zona Leste - Centro Paula Souza | Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<script src="inscricao.js"></script>
+</body>
+</html>

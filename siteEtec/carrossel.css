@@ -1,0 +1,190 @@
+/* ===== CAROUSEL ===== */
+.carousel-section {
+    margin: 40px 0;
+}
+
+.carousel-section h2 {
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.carousel-btn {
+    background: #B20000;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: #800000;
+    transform: scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-wrapper {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slides {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.carousel-slide.active {
+    display: flex;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== INDICADORES ===== */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator:hover {
+    background: #B20000;
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background: #B20000;
+    width: 30px;
+    border-radius: 6px;
+    border-color: #800000;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-slide.active {
+    animation: slideIn 0.6s ease;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+    .carousel-wrapper {
+        max-width: 600px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        gap: 10px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .carousel-wrapper {
+        max-width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-container {
+        gap: 8px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .carousel-wrapper {
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .indicator.active {
+        width: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel-wrapper {
+        height: 200px;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9em;
+    }
+}

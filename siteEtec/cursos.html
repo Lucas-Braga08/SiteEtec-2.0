@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - ETEC Zona Leste</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <div class="logo-section">
+            <h1>ETEC Zona Leste</h1>
+            <p>Centro Paula Souza</p>
+        </div>
+        <div class="header-contact">
+            <span><a href="tel:+551120454000">(11) 2045-4000</a></span>
+            <span><a href="mailto:dir.etezonaleste@centropaulasouza.sp.gov.br">dir.etezonaleste@centropaulasouza.sp.gov.br</a></span>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Início</a>
+       
+        <div class="nav-item">
+            <a href="cursos.html">Cursos</a>
+            <div class="dropdown-menu">
+                <a href="cursos.html#tecnicos">Cursos Técnicos - Modalidade Presencial</a>
+                <a href="cursos.html#mtec">Ensino Médio Integrado ao Técnico (M-Tec)</a>
+                <a href="cursos.html#ams">Articulação dos Ensinos Médios - Técnico e Superior (AMS)</a>
+            </div>
+        </div>
+        
+        <a href="inscricao.php">Inscrição</a>
+        <a href="contato.php">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Cursos Técnicos Oferecidos</h2>
+    <p style="margin-bottom: 30px;">
+        A ETEC Zona Leste oferece três modalidades de cursos técnicos de excelência. 
+        Clique na aba desejada para conhecer os cursos disponíveis.
+    </p>
+
+    <!-- ===== ABAS DE NAVEGAÇÃO ===== -->
+    <div class="tabs-container">
+        <button class="tab-btn active" onclick="mostrarAba('presencial')">
+            💼 Técnico Presencial
+        </button>
+        <button class="tab-btn" onclick="mostrarAba('mtec')">
+            📚 M-Tec (Médio Integrado)
+        </button>
+        <button class="tab-btn" onclick="mostrarAba('ams')">
+            🎓 AMS (Técnico + Superior)
+        </button>
+    </div>
+
+    <!-- ===== ABA 1: TÉCNICO PRESENCIAL ===== -->
+    <div id="presencial" class="tab-content active">
+        <h2 id="tecnicos">Técnico Presencial</h2>
+        <p style="margin-bottom: 40px;">
+            Cursos técnicos com aulas presenciais em nossa escola, com prática em laboratórios 
+            e interação direta com professores e colegas.
+        </p>
+
+        <div class="cursos-grid">
+            <!-- DS -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Desenvolvimento de Sistemas</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Programação, Banco de Dados, Desenvolvimento Web e Mobile com as principais linguagens do mercado (Java, Python, JavaScript). Os alunos aprenderão a criar soluções inovadoras, desde conceituação até implementação e manutenção de sistemas. Desenvolverão habilidades em análise de requisitos, design de software e testes de qualidade.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> Técnico Presencial</span>
+                                <span><strong>Eixo:</strong> Informação</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/Ds tec.jpg" alt="Desenvolvimento de Sistemas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADM -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Administração</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Gestão empresarial, planejamento estratégico e organização operacional. Os alunos compreenderão o funcionamento de organizações públicas e privadas, desenvolvendo capacidades de liderança, tomada de decisão e gestão de recursos. Aprenderão técnicas modernas de administração aplicadas aos desafios contemporâneos do mercado.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> Técnico Presencial</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/adm.png" alt="Administração">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contabilidade -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Contabilidade</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Contabilidade geral, fiscal, gerencial e análise de demonstrações financeiras. Os alunos dominarão técnicas de escrituração contábil, elaboração de relatórios financeiros e conformidade fiscal. Conhecerão sistemas contábeis modernos e aprenderão a interpretar dados contábeis para tomada de decisões empresariais.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 800h</span>
+                                <span><strong>Tipo:</strong> Técnico Presencial</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/cont.jpg" alt="Contabilidade">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finanças -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Finanças</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Gestão financeira, investimentos, análise de crédito e planejamento financeiro corporativo. Os alunos estudarão mercados financeiros, análise de riscos, estruturas de capital e instrumentos de investimento. Desenvolverão competências para assessorar organizações em decisões financeiras estratégicas e gerenciamento de recursos.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 800h</span>
+                                <span><strong>Tipo:</strong> Técnico Presencial</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/financas.jpg" alt="Finanças">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logística -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Logística</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Controle de estoque, gestão da cadeia de suprimentos, distribuição e armazenagem. Os alunos compreenderão o fluxo de materiais desde a matéria-prima até o cliente final. Aprenderão técnicas de otimização de processos, redução de custos e utilização de tecnologias de rastreamento e gestão de inventário.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> Técnico Presencial</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/logistica.jpg" alt="Logística">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recursos Humanos -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Recursos Humanos</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Gestão de pessoas, recrutamento, seleção, treinamento e desenvolvimento profissional. Os alunos aprenderão sobre comportamento organizacional, gestão de desempenho e cultura corporativa. Desenvolverão habilidades para recrutamento, seleção, treinamento e retenção de talentos em organizações de qualquer porte.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> Técnico Presencial</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/rh.jpg" alt="Recursos Humanos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviços Jurídicos -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Serviços Jurídicos</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Noções de direito civil, comercial, trabalhista e procedimentos jurídicos em escritórios e empresas. Os alunos compreenderão o sistema legal, direitos e obrigações nas relações comerciais. Preparam-se para atuar como assistentes em departamentos jurídicos, escritórios de advocacia e cartórios, dominando procedimentos administrativos e documentação legal.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> Técnico Presencial</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/sj.jpg" alt="Serviços Jurídicos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ABA 2: M-TEC ===== -->
+    <div id="mtec" class="tab-content">
+        <h2 id="mtec">Ensino Médio Integrado ao Técnico (M-Tec)</h2>
+        <p style="margin-bottom: 40px;">
+            Programa que integra o Ensino Médio com a formação técnica em um só programa, 
+            com diploma duplo (Ensino Médio + Técnico).
+        </p>
+
+        <div class="cursos-grid">
+            <!-- M-Tec 1 -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Desenvolvimento de Sistemas</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Integra o Ensino Médio completo com formação técnica em Programação, Banco de Dados e Desenvolvimento Web/Mobile. Os alunos cursam disciplinas de Português, Matemática, História, Geografia junto com disciplinas técnicas. Ao final, recebem Diploma de Ensino Médio e Certificado Técnico, saindo preparados para o mercado de trabalho.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 3300h</span>
+                                <span><strong>Tipo:</strong> M-Tec</span>
+                                <span><strong>Eixo:</strong> Informação</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/Ds tec.jpg" alt="M-Tec Desenvolvimento de Sistemas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M-Tec 2 -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Administração</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Disciplinas do Ensino Médio + Gestão Empresarial, Finanças e Planejamento Estratégico. Os alunos desenvolvem uma visão abrangente sobre o funcionamento das organizações, compreendendo estruturas hierárquicas, modelos modernos de gestão e marcos históricos que influenciaram o panorama empresarial. Formação integrada com visão ampla do negócio.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> M-Tec</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/adm.png" alt="M-Tec Administração">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M-Tec 3 -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Recursos Humanos</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Ensino Médio + Gestão de Pessoas, Recrutamento e Desenvolvimento. Os alunos estudam comportamento organizacional, motivação, comunicação e liderança, integrados com disciplinas de humanidades. Desenvolvem competências para atuar como especialista em gestão de pessoas, compreendendo aspectos legais, éticos e psicológicos da administração de recursos humanos.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> M-Tec</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/rh.jpg" alt="M-Tec Recursos Humanos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M-Tec 4 -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Logística</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p>Ensino Médio + Supply Chain, Estoque e Gestão de Distribuição. Os alunos mergulham no fluxo logístico completo, desde planejamento até execução. Integram conhecimentos de matemática e estatística para otimizar processos. Desenvolvem competências para liderar operações logísticas em empresas, compreendendo tecnologias modernas e sustentabilidade na cadeia de suprimentos.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> M-Tec</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/logistica.jpg" alt="M-Tec Logística">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ABA 3: AMS ===== -->
+    <div id="ams" class="tab-content">
+        <h2 id="ams">Articulação dos Ensinos Médios - Técnico e Superior (AMS)</h2>
+        <p style="margin-bottom: 40px;">
+            Programa que articula o ensino técnico com cursos superiores de tecnologia, 
+            permitindo redução de tempo e aproveitamento de disciplinas cursadas.
+        </p>
+
+        <div class="cursos-grid">
+            <!-- AMS 1 -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Desenvolvimento de Sistemas (Vespertino)</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p><strong>Etapa Técnica (2 anos):</strong> Programação, Banco de Dados, Web e Mobile com linguagens Java, Python, JavaScript. Os alunos desenvolvem soluções práticas e reais, criando portfólio profissional. <strong>Etapa Superior (2 anos):</strong> Análise e Desenvolvimento de Sistemas com aproveitamento das disciplinas técnicas. Total de aproximadamente 3 anos para obtenção de ambos os certificados.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> AMS</span>
+                                <span><strong>Eixo:</strong> Informação</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/Ds tec.jpg" alt="AMS Desenvolvimento de Sistemas">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AMS 2 -->
+            <div class="curso-card">
+                <div class="curso-header">
+                    <h3>Recursos Humanos (Vespertino)</h3>
+                </div>
+                <div class="curso-body">
+                    <div class="curso-conteudo">
+                        <div class="curso-descricao">
+                            <p><strong>Etapa Técnica (2 anos):</strong> Gestão de Pessoas, Recrutamento e Seleção. Os alunos aprendem legislação trabalhista, processos de recursos humanos e desenvolvimento organizacional. <strong>Etapa Superior (2 anos):</strong> Gestão de Recursos Humanos com aproveitamento de disciplinas da formação técnica. Forma especialista em RH com conhecimento prático e teórico completo.</p>
+                            <div class="info-compacta">
+                                <span><strong>Carga:</strong> 1200h</span>
+                                <span><strong>Tipo:</strong> AMS</span>
+                                <span><strong>Eixo:</strong> Gestão e Negócios</span>
+                            </div>
+                        </div>
+                        <div class="curso-imagem">
+                            <img src="imagens/rh.jpg" alt="AMS Recursos Humanos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CHAMADA PARA AÇÃO ===== -->
+    <section class="cta-box">
+        <h2>Escolha Seu Caminho Profissional</h2>
+        <p>Inscreva-se agora e comece sua jornada de sucesso</p>
+        <a href="inscricao.php" class="btn cta-btn">INSCREVER-SE</a>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Sobre</h3>
+            <p>ETEC Zona Leste - Instituição de ensino técnico público mantida pelo Centro Paula Souza.</p>
+            <p>Formando profissionais qualificados desde 2006.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p>📍 Avenida Águia de Haia, 2633</p>
+            <p>Cidade AE Carvalho - São Paulo, SP - CEP: 03694-000</p>
+            <p>📞 <a href="tel:+551120454000">(11) 2045-4000</a></p>
+            <p>📧 <a href="mailto:dir.etezonaleste@centropaulasouza.sp.gov.br">dir.etezonaleste@centropaulasouza.sp.gov.br</a></p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Links Úteis</h3>
+            <p><a href="sobre.html">Sobre a ETEC</a></p>
+            <p><a href="cursos.html">Nossos Cursos</a></p>
+            <p><a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a></p>
+            <p><a href="contato.php">Fale Conosco</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 ETEC Zona Leste - Centro Paula Souza | Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<script src="cursos.js"></script>
+</body>
+</html>
